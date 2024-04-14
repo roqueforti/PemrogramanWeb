@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Polinema Creative Center</title>
+   <link rel="stylesheet" href="assets/styles/style.css">
+   <script type="text/javascript" src="jquery-3.7.1.js"></script>
+   <script src="script.js"></script>
+</head>
+<body>
+   <header>
+    <div class="jumbotron">
+       <h1 id="title">Polinema Creative Center</h1>
+       <p id="tagline">Unlocking Spaces, Igniting Creativity</p>
+    </div>
+       <nav>
+           <ul>
+               <li><a href="#Home">Home</a></li>
+               <li><a href="#Facility">Facility</a></li>
+               <li><a href="#Booking">Booking</a></li>
+           </ul>
+       </nav>
+    </header>
+<main>
+    <div id="content">
+        <article id="Home" class="card">
+            <h2 id="pcc">Polinema Creative Center</h2>
+            <img src="assets/image/grapol.png" class="featured-image" alt="grapol">
+            <p>The Polinema Creative Center (PCC) is an initiative by the State Polytechnic of Malang to support creative individuals in the city of Malang by providing spaces and facilities that can be booked.</p>
+        </article>
+     
+        <article id="Facility" class="card">
+            <h2>Facility</h2>
+            <h4>Graha Polinema</h4>
+            <img src="assets/image/grapol2.jpeg" class="featured-image" alt="grapol">           
+            <h4>Aula Pertamina</h4>
+            <img src="assets/image/auper.jpg" class="featured-image" alt="auper">
+            <h4>Auditorium Lantai 8 Teknik Sipil</h4>
+            <img src="assets/image/audit.jpg" class="featured-image" alt="audit">
+            <h4>Graha Theater</h4>
+            <img src="assets/image/grater.jpg" class="featured-image" alt="grater">
+        </article>
+
+        <article id="Booking" class="card2">
+            <h2 id="book">Booking</h2>
+            <form id="reservationForm" method="POST" action="reserve.php">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="building">Building/Room:</label><br>
+                <select id="building" name="building" required>
+                    <option value="Building A">Graha Polinema</option>
+                    <option value="Building B">Aula Pertamina</option>
+                    <option value="Building C">Auditorium Teknik Sipil</option>
+                    <option value="Building D">Graha Theater</option>
+                </select><br>
+                
+                <label for="date">Date:</label><br>
+                <input type="date" id="date" name="date" required><br>
+            
+                <label for="time">Time Slot:</label><br>
+                <select id="time" name="time" required>
+                    <option value="07:00 - 12:00">07:00 - 12:00</option>
+                    <option value="12:00 - 17:00">12:00 - 17:00</option>
+                    <option value="17:00 - 22:00">17:00 - 22:00</option>
+                </select><br>
+            
+                <button type="submit">Reserve Now</button>
+            </form>
+                                
+        </article>
+    </div>
+</main>
+<footer>
+    <p>Polinema Creative Center &copy; 2024, Hilman Zahrawa Budiarto</p>
+</footer>
+
+</body>
+
