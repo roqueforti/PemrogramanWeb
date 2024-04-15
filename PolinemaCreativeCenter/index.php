@@ -57,10 +57,12 @@
     
     <label for="building">Building/Room:</label><br>
     <select id="building" name="building" required>
-        <option value="Building A">Graha Polinema</option>
-        <option value="Building B">Aula Pertamina</option>
-        <option value="Building C">Auditorium Lantai 8 Gedung Teknik Sipil</option>
-        <!-- Add more options as needed -->
+        <option value="Graha Polinema">Graha Polinema</option>
+        <option value="Aula Pertamina">Aula Pertamina</option>
+        <option value="Auditorium Sipil">Auditorium Lantai 8 Gedung Teknik Sipil</option>
+        <option value="Graha Theater">Graha Theater</option>
+        <option value="Ruang Musik JTI">Ruang Musik Jurusan Teknologi Informasi</option>
+        <option value="Ruang LSI 1, 2, dan 3 JTI">Ruang LSI 1, 2, dan 3 Jurusan Teknologi Informasi</option>
     </select><br>
     
     <label for="date">Date:</label><br>
@@ -71,7 +73,6 @@
         <option value="07:00 - 12:00">07:00 - 12:00</option>
         <option value="12:00 - 17:00">12:00 - 17:00</option>
         <option value="17:00 - 22:00">17:00 - 22:00</option>
-        <!-- Add more time slots as needed -->
     </select><br>
 
     <button type="submit">Reserve Now</button>
