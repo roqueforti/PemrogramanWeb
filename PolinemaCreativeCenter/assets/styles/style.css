@@ -74,6 +74,7 @@ nav a:hover {
 }
 
 .card2 {
+   text-align: center;
    color: white;
    background-color: #0554F2;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -81,8 +82,8 @@ nav a:hover {
    padding: 20px;
    margin-top: 20px;
    size: 30px;
-   margin-left: 125px;
-   margin-right: 125px;
+   margin-left: 250px;
+   margin-right: 250px;
 }
 
 #book {
@@ -125,6 +126,17 @@ nav {
    margin-right: 10%;
    width: 75%
  }
+
+ .btn {
+   font-size: 30px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+ }
+
+.btn:hover {
+   font-weight: bold;
+}
 
  * {
    box-sizing: border-box;
