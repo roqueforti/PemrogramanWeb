@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $reservation_data = array(
+        "name" => $_POST["name"],
+        "email" => $_POST["email"],
+        "building" => $_POST["building"],
+        "date" => $_POST["date"],
+        "time" => $_POST["time"]
+    );
+
+    setcookie("reservation_data", serialize($reservation_data), time() + (86400 * 30), "/");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,13 +53,14 @@
 <body>
 <div class="confirmation-box">
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_COOKIE["reservation_data"])) {
+        $reservation_data = unserialize($_COOKIE["reservation_data"]);
         echo "<h2>Reservation Confirmation</h2>";
-        echo "<p>Name: " . $_POST["name"] . "</p>";
-        echo "<p>Email: " . $_POST["email"] . "</p>";
-        echo "<p>Building/Room: " . $_POST["building"] . "</p>";
-        echo "<p>Date: " . $_POST["date"] . "</p>";
-        echo "<p>Time Slot: " . $_POST["time"] . "</p>";
+        echo "<p>Name: " . $reservation_data["name"] . "</p>";
+        echo "<p>Email: " . $reservation_data["email"] . "</p>";
+        echo "<p>Building/Room: " . $reservation_data["building"] . "</p>";
+        echo "<p>Date: " . $reservation_data["date"] . "</p>";
+        echo "<p>Time Slot: " . $reservation_data["time"] . "</p>";
         echo "<p>Your reservation has been confirmed. Thank you!</p>";
     } else {
         echo "<h2>Error</h2>";
